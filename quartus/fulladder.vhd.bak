@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity fulladder is
+   port(
+      input0, input1: in std_logic_vector();
+		carryin: in std_logic;
+      output: out std_logic_vector()
+   );
+end entity;
+
+architecture arch of fulladder is
+
+	begin
+		output <= 	std_logic_vector(signed(input0) + signed(input1)) when carryin='0' else
+						std_logic_vector(signed(input0) - signed(input1));
+	end arch;

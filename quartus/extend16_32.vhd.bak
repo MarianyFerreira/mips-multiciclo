@@ -1,0 +1,22 @@
+slv_16 <= std_logic_vector(resize(signed(slv_8), slv_16'length));
+
+
+
+saida(larguraOriginal-1 downto 0) <= entrada;
+
+saida(larguraExtendida-1 downto larguraOriginal) <= (others => entrada(larguraOriginal-1));
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity  extend16_32 is
+port( inp in : std_logic_vector(15 downto 0);
+		outp out : std_logic_vector (31 downto 0);
+	 );
+end  extend16_32 ;
+
+architecture arch of extend16_32 is
+
+	begin
+		outp <= std_logic_vector(resize(signed(inp), outp'length));
+	end arch;
