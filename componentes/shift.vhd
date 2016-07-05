@@ -1,16 +1,15 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity shift is
-port ( 	inp		: in std_logic_vector (31 downto 0);
-		outp 	: out std_logic_vector (31 downto 0)
-	 );
+	port( input : in std_logic_vector (31 downto 0);
+
+			output : out std_logic_vector (31 downto 0)
+	);
 end  shift ;
 
-architecture arch of shift is
-	
+architecture behavior of shift is
 	begin
-
-		outp <= (inp sll 2);
-	
-	end arch;
+		output <= std_logic_vector(signed(input) sll 2);
+	end behavior;

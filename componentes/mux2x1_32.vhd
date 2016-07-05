@@ -1,20 +1,19 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity mux3x1_32 is
-	port( sel 		: in std_logic_vector (1 downto 0);
-			input0, input1, input0 : in std_logic_vector(31 downto 0);
+entity mux2x1_32 is
+	port( sel : in std_logic;
+			input0, input1	: in std_logic_vector(31 downto 0);
         	
-        	output		: out std_logic_vector(31 downto 0)
+        	output : out std_logic_vector(31 downto 0)
     );
 end;
 
-architecture arch of mux2x1_32 is
+architecture behavior of mux2x1_32 is
 	begin
-		outp <= input0 when sel = '0' else
-				  input1;
-    
-	end arch;
+		output <= 	input0 when sel = '0' else
+						input1;
+	end behavior;
 
 -- Mux ligado nas saidas do Registrador da ULA e do Registrador de dados da Memória
 	-- inp0 <= Registrador ULA

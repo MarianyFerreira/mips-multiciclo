@@ -2,7 +2,7 @@ library ieee ;
 USE ieee.std_logic_1164.all;
 
 entity dataregister is
-	port(	reset, clk 	: in std_logic;
+	port(	enable, reset, clk 	: in std_logic;
 			input : in std_logic_vector (15 downto 0);
 
 			output : out std_logic_vector (15 downto 0)
@@ -14,8 +14,8 @@ architecture behavior of dataregister is
 		process(clk, reset)
 			begin
 				if reset = '0' then				
-					input <= (others >= '0');
-				elsif rising_edge(clk) then
+					output <= (others => '0');
+				elsif rising_edge(clk) and enable = '1' then
 					output <= input;
 				end if;
 		end process;
