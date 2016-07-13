@@ -12,7 +12,7 @@ entity blocoOperativo is
    );
 end entity;
 
-architecture estrutural of blocoOperativo is
+architecture arch of blocoOperativo is
 
 component dataregister is
 -- PC, registrador de instrucoes, registrador de dados, A, B, ULA
@@ -146,11 +146,6 @@ end component;
 			signal DeslocadorMux3x1: std_logic_vector(31 downto 0);
 
 begin
-			-- clock, reset: in std_logic;
-			-- PCEscCond, PCEsc, IouD, LerMem, EscMem, MemParaReg, IREsc, RegDst, EscReg, ULAFonteA: in std_logic;
-			-- ULAFonteB, ULAOp, FontePC: in std_logic_vector(1 downto 0);
-			
-			-- opcode: out std_logic_vector(5 downto 0)
 			
 			PCEnable <= PCEsc or (PCEscCond and zero_end); 
 			
@@ -184,6 +179,8 @@ begin
 			
 			OperacaoUla : operationULA port map(ULAOp, RegInstrucoes_Saida(5 downto 0), Operacao_ULA);
 			
+			opcode <= RegInstrucoes_Saida(31 downto 26);
+			
 			aULA : ULA port map (MuxA_ULA, MuxB_ULA, Operacao_ULA, ULA_Resultado, zero_end);
 			
 			DeslocadorMux3x1 <= PC_Mux(31 downto 28)&RegInstrucoes_Saida(25 downto 0)&"00";
@@ -192,4 +189,4 @@ begin
 			
 			MuxPC : mux3x1_32 port map(FontePC, ULA_Resultado, ULA_Saida, DeslocadorMux3x1, Mux_PC);
 			
-end architecture;
+end arch;

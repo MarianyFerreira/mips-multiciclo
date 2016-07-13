@@ -15,7 +15,7 @@ entity blocoControle is
    );
 end entity;
 
-architecture FSMcomportamental of blocoControle is
+architecture FSM of blocoControle is
 	type state is (s0, s1, s2, s3, s4, s5, s6, s7, s8, s9);
 	signal next_state, actual_state : state;
 	-- usado para identificar na maquina de estados a operacao e porquanto o caminho a se seguir
@@ -128,4 +128,4 @@ process(clock, actual_state)
 			FontePC <= "10";
 		end case;
 end process;
-end architecture;
+end FSM;
