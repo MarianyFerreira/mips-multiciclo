@@ -13,7 +13,3 @@ architecture behavior of extend16_32 is
 	begin
 		output <= std_logic_vector(resize(signed(input), output'length));
 	end behavior;
-
-	-- Extensor de sinal ligado na saida do registrador de instruçoes
-	-- 15 - 0
-	

@@ -13,5 +13,3 @@ architecture behavior of shift is
 	begin
 		output <= std_logic_vector(signed(input) sll 2);
 	end behavior;
-
-	-- Deslocador de 2 bits ligado na saida do registrador de instruçoes 

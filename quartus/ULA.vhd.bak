@@ -39,5 +39,4 @@ architecture behavior of ULA is
 		output <= outputOp;
  
 		flagzero <= '1' when outputOp = (others => '0') else '0';
-		
 	end behavior;

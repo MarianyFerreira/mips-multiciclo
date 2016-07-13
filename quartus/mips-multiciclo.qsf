@@ -63,4 +63,9 @@ set_global_assignment -name VHDL_FILE fulladder.vhd
 set_global_assignment -name VHDL_FILE model.vhd
 set_global_assignment -name VHDL_FILE operationULA.vhd
 set_global_assignment -name VHDL_FILE ULA.vhd
+set_global_assignment -name QIP_FILE bram.qip
+set_global_assignment -name VHDL_FILE bank_registers.vhd
+set_global_assignment -name VHDL_FILE blocoControle.vhd
+set_global_assignment -name VHDL_FILE blocoOperativo.vhd
+set_global_assignment -name VHDL_FILE mem.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

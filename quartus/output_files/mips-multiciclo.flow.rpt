@@ -1,5 +1,5 @@
 Flow report for mips-multiciclo
-Mon Jul  4 20:32:38 2016
+Tue Jul 12 21:44:38 2016
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Mon Jul  4 20:32:38 2016      ;
+; Flow Status                        ; Successful - Tue Jul 12 21:44:38 2016      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; mips-multiciclo                            ;
 ; Top-level Entity Name              ; toplevel                                   ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/04/2016 20:31:58 ;
+; Start date & time ; 07/12/2016 21:43:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mips-multiciclo     ;
 +-------------------+---------------------+
@@ -75,11 +75,14 @@ applicable agreement for further details.
 +-------------------------------------+------------------------+-----------------+-------------+----------------+
 ; Assignment Name                     ; Value                  ; Default Value   ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------+-----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.146767511804767      ; --              ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.146837063504770      ; --              ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                   ; --              ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL) ; <None>          ; --          ; --             ;
+; IP_TOOL_NAME                        ; RAM: 1-PORT            ; --              ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                   ; --              ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                     ; --              ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                      ; --              ; --          ; --             ;
+; MISC_FILE                           ; bram.cmp               ; --              ; --          ; --             ;
 ; PARTITION_COLOR                     ; 16764057               ; --              ; toplevel    ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING  ; --              ; toplevel    ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                 ; --              ; toplevel    ; Top            ;
@@ -93,12 +96,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 595 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 717 MB              ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 603 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:12     ; 1.0                     ; 711 MB              ; 00:00:11                           ;
 ; Assembler                 ; 00:00:05     ; 1.0                     ; 562 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 494 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 497 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:20                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

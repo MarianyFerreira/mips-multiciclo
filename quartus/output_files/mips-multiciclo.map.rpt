@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips-multiciclo
-Mon Jul  4 20:32:01 2016
+Tue Jul 12 21:43:58 2016
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul  4 20:32:01 2016      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 12 21:43:58 2016      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; mips-multiciclo                            ;
 ; Top-level Entity Name              ; toplevel                                   ;
@@ -228,7 +228,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Mon Jul  4 20:31:57 2016
+    Info: Processing started: Tue Jul 12 21:43:53 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips-multiciclo -c mips-multiciclo
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_32.vhd
@@ -267,6 +267,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file operati
 Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
     Info (12022): Found design unit 1: ULA-behavior
     Info (12023): Found entity 1: ULA
+Info (12021): Found 2 design units, including 1 entities, in source file bram.vhd
+    Info (12022): Found design unit 1: bram-SYN
+    Info (12023): Found entity 1: bram
+Info (12021): Found 2 design units, including 1 entities, in source file bank_registers.vhd
+    Info (12022): Found design unit 1: bank_registers-comportamental
+    Info (12023): Found entity 1: bank_registers
+Info (12021): Found 2 design units, including 1 entities, in source file blocoControle.vhd
+    Info (12022): Found design unit 1: blocoControle-FSMcomportamental
+    Info (12023): Found entity 1: blocoControle
+Info (12021): Found 2 design units, including 1 entities, in source file blocoOperativo.vhd
+    Info (12022): Found design unit 1: blocoOperativo-estrutural
+    Info (12023): Found entity 1: blocoOperativo
+Info (12021): Found 2 design units, including 1 entities, in source file mem.vhd
+    Info (12022): Found design unit 1: mem-behavior
+    Info (12023): Found entity 1: mem
 Info (12127): Elaborating entity "toplevel" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(7): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (13024): Output pins are stuck at VCC or GND
@@ -341,9 +356,9 @@ Info (21057): Implemented 64 device resources after synthesis - the final resour
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 32 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 626 megabytes
-    Info: Processing ended: Mon Jul  4 20:32:01 2016
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 642 megabytes
+    Info: Processing ended: Tue Jul 12 21:43:58 2016
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

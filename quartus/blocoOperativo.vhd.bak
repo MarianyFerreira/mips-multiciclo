@@ -1,0 +1,23 @@
+-- This VHD file, for not being generic was written in Portuguese
+-- O Bloco operativo do Mips foi descrito conforme a arquitetura vista na imagem Mips Multiciclo
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity blocoOperativo is 
+   port(
+      clock, reset: in std_logic;
+      PCEscCond, PCEsc, IouD, LerMem, EscMem, MemParaReg, IREsc, RegDst, EscReg, ULAFonteA: in std_logic;
+      ULAFonteB, ULAOp, FontePC: in std_logic_vector(1 downto 0);
+      opcode: out std_logic_vector(5 downto 0)
+   );
+end entity;
+
+architecture estrutural of blocoOperativo is
+  
+component dataregister is
+	port(	enable, reset, clk 	: in std_logic;
+			input : in std_logic_vector (31 downto 0);
+
+			output : out std_logic_vector (31 downto 0)
+		 );
+end component;
