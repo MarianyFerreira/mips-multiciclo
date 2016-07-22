@@ -7,11 +7,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity blocoControle is 
-   port(
-      clock, reset: in std_logic;
-      PCEscCond, PCEsc, IouD, LerMem, EscMem, MemParaReg, IREsc, RegDst, EscReg, ULAFonteA: out std_logic;
-      ULAFonteB, ULAOp, FontePC: out std_logic_vector(1 downto 0);
-      opcode: in std_logic_vector(5 downto 0)
+   port( clock, reset: in std_logic;
+	 opcode: in std_logic_vector(5 downto 0);
+      	 PCEscCond, PCEsc, IouD, LerMem, EscMem, MemParaReg, IREsc, RegDst, EscReg, ULAFonteA: out std_logic;
+	 ULAFonteB, ULAOp, FontePC: out std_logic_vector(1 downto 0)
    );
 end entity;
 
@@ -35,7 +34,7 @@ begin
 		end if;
 	end process;
 	-- next state logig
-	process(opcode,clock)
+	process(actual_state, opcode)
 	begin
 		case actual_state is
 		-- A mudança de estados foi feita como mostra a imagem Tabela de Estados
@@ -48,7 +47,7 @@ begin
 					next_state <= s2;
 				elsif opcode = beq then
 					next_state <= s8;
-				elsif opcode = jump then
+				else opcode = jump then
 					next_state <= s9;
 				end if;
 			when s2 =>          -- 
